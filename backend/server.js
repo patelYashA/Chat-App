@@ -9,10 +9,10 @@ const cors = require('cors');
 app.use(cors());
 
 io.on("connection", (socket) => {
-    console.log(socket);
+    // console.log(socket);
 
     socket.on("chat", (payload) => {
-        console.log(payload);
+        console.log("payload", payload);
         io.emit("chat", payload)
     })
 })
